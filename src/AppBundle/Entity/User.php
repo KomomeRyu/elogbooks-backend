@@ -3,10 +3,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as JMS;
 
 /**
- * User
- *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
@@ -14,7 +13,8 @@ class User
 {
     /**
      * @var int
-     *
+     * @JMS\Expose
+     * @JMS\Groups({"default", "list"})
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -23,22 +23,25 @@ class User
 
     /**
      * @var string
-     *
+     * @JMS\Expose
+     * @JMS\Groups({"default", "list"})
      * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
 
     /**
      * @var string
-     *
+     * @JMS\Expose
+     * @JMS\Groups({"default", "list"})
      * @ORM\Column(name="email", type="string", length=100, unique=true)
      */
     private $email;
 
     /**
      * @var int
-     *
-     * @ORM\Column(name="job_id", type="integer")
+     * @JMS\Expose
+     * @JMS\Groups({"default", "list"})
+     * @ORM\Column(name="jobid", type="integer")
      */
     private $jobId;
 

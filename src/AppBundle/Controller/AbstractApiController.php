@@ -45,7 +45,6 @@ abstract class AbstractApiController extends FOSRestController
             $context->setGroups($serializationGroups);
             $view->setContext($context);
         }
-
         return $this->handleView($view);
     }
 

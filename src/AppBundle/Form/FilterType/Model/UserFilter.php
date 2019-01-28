@@ -83,7 +83,7 @@ class UserFilter
     *
     * @Assert\type(type="integer")
     **/
-    protected $jobid;
+    protected $Jobid;
 
     /**
      * @return array
@@ -145,17 +145,17 @@ class UserFilter
       */
       public function getJobId()
       {
-        return $this->jobid;
+        return $this->Jobid;
       }
 
       /**
-       * @param int $jobid
+       * @param int $Jobid
        *
        * @return self
        */
-       public function setJobId($jobid)
+       public function setJobId($Jobid)
        {
-          $this->jobid = $jobid;
+          $this->Jobid = $Jobid;
 
           return $this;
        }
@@ -165,7 +165,7 @@ class UserFilter
      */
     public static function getPossibleSerialisationGroups()
     {
-        return ['user', 'default', 'email', 'jobid'];
+        return ['user', 'default', 'email', 'Jobid'];
     }
 
     /**

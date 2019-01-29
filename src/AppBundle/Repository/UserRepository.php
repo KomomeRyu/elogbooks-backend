@@ -30,7 +30,7 @@ class UserRepository extends EntityRepository
 
     /**
      * @param QueryBuilder $qb
-     * @param ListFilter   $listFilterModel
+     * @param UserFilter   $listFilterModel
      *
      * @return $this
      */
@@ -54,11 +54,6 @@ class UserRepository extends EntityRepository
         {
             $qb
                 ->andWhere(sprintf(" u.email = '%s' ", $listFilterModel->getEmail()));
-        }
-        if($listFilterModel->getJobId())
-        {
-            $qb
-                ->andWhere(sprintf("u.jobid = '%s' ",$listFilterModel->getJobId()));
         }
     }
 }

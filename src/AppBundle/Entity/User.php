@@ -40,15 +40,6 @@ class User
     private $email;
 
     /**
-     * @var int
-     * @JMS\Expose
-     * @JMS\Groups({"default", "list"})
-     * @ORM\Column(name="jobid", type="integer")
-     */
-    private $jobId;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -104,30 +95,6 @@ class User
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * Set jobId
-     *
-     * @param integer $jobId
-     *
-     * @return User
-     */
-    public function setJobId($jobId)
-    {
-        $this->jobId = $jobId;
-
-        return $this;
-    }
-
-    /**
-     * Get jobId
-     *
-     * @return int
-     */
-    public function getJobId()
-    {
-        return $this->jobId;
     }
 }
 

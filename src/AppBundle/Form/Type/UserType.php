@@ -18,7 +18,6 @@ class UserType extends AbstractApiType
         $builder
             ->add('name', null, [])
             ->add('email', null, [])
-            ->add('jobid', null, [])
         ;
     }
 

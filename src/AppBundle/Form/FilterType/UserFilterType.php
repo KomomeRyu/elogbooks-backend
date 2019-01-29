@@ -24,7 +24,6 @@ class UserFilterType extends AbstractApiType
             ->add('serialisationGroups', null, [])
             ->add('name',null,[])
             ->add('email',null,[])
-            ->add('jobid',null,[])
         ;
     }
 

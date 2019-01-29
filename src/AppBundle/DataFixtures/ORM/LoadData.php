@@ -49,12 +49,10 @@ class LoadUserData implements FixtureInterface
            [
                'name' => 'Pepe',
                'email' => 'pepe@pepe.com',
-               'jobid' => '0'
            ],
            [
             'name' => 'Juan',
             'email' => 'juan@juan.com',
-            'jobid' => '0'
         ],
         ];
 
@@ -62,7 +60,6 @@ class LoadUserData implements FixtureInterface
             $user = new User();
             $user->setName($userDetails['name']);
             $user->setEmail($userDetails['email']);
-            $user->setJobId($userDetails['jobid']);
 
             $manager->persist($user);
         }

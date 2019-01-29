@@ -78,14 +78,6 @@ class UserFilter
     protected $email;
 
     /**
-    *
-    * @var int
-    *
-    * @Assert\type(type="integer")
-    **/
-    protected $Jobid;
-
-    /**
      * @return array
      */
     public static function getOrderKeys()
@@ -140,32 +132,13 @@ class UserFilter
 
          return $this;
       }
-     /**
-      * @return int
-      */
-      public function getJobId()
-      {
-        return $this->Jobid;
-      }
-
-      /**
-       * @param int $Jobid
-       *
-       * @return self
-       */
-       public function setJobId($Jobid)
-       {
-          $this->Jobid = $Jobid;
-
-          return $this;
-       }
 
     /**
      * @return array
      */
     public static function getPossibleSerialisationGroups()
     {
-        return ['user', 'default', 'email', 'Jobid'];
+        return ['user', 'default', 'email'];
     }
 
     /**

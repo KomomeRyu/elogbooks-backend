@@ -46,6 +46,16 @@ class Job
      */
     protected $status = self::STATUS_OPEN;
 
+     /**
+     * @var integer
+     *
+     * @ORM\Column(type="integer")
+     *
+     * @JMS\Expose
+     * @JMS\Groups({"default", "list"})
+     */
+    protected $userid;
+
     /**
      * @return int
      */
@@ -90,6 +100,26 @@ class Job
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserid()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $userid
+     *
+     * @return self
+     */
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
 
         return $this;
     }

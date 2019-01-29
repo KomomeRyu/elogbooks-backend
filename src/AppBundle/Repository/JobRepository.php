@@ -73,5 +73,11 @@ class JobRepository extends EntityRepository
                 ->andWhere(sprintf("j.description LIKE '%s'","%".$listFilterModel->getDescription()."%"));
         }
 
+        if($listFilterModel->getUserid())
+        {
+            $qb
+                ->andWhere(sprintf("j.userid LIKE '%s'","%".$listFilterModel->getUserid()."%"));
+        }
+
     }
 }

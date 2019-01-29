@@ -71,6 +71,15 @@ class JobFilter
     protected $status;
 
     /**
+     * @var integer
+    *
+    * @var int
+    *
+    * @Assert\type(type="integer")
+    */
+    protected $userid;
+
+    /**
      * @var string
      *
      * @Assert\Type(type="string")
@@ -183,6 +192,26 @@ class JobFilter
 
         return $this;
      }
+
+    /**
+     * @return int
+     */
+    public function getUserid()
+    {
+        return $this->userid;
+    }
+
+    /**
+     * @param int $userid
+     *
+     * @return self
+     */
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
+
+        return $this;
+    }
 
      /**
       * @return string

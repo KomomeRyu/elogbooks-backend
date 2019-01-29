@@ -23,6 +23,7 @@ class JobFilterType extends AbstractApiType
             ->add('orderDirection', null, [])
             ->add('serialisationGroups', null, [])
             ->add('status',null,[])
+            ->add('userid', null, [])
             ->add('type',null,[])
             ->add('description',null,[])
             ->add('customer',null,[])

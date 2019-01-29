@@ -30,6 +30,7 @@ class LoadJobData implements FixtureInterface
         foreach ($jobDescriptions as $jobDescription) {
             $job = new Job();
             $job->setDescription($jobDescription);
+            $job->setUserid(0);
 
             $manager->persist($job);
         }

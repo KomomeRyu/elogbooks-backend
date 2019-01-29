@@ -4,6 +4,7 @@ namespace AppBundle\Form\FilterType\Model;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
+
 class UserFilter
 {
     const LIMIT = 30;
@@ -72,8 +73,10 @@ class UserFilter
 
     /**
      * @var string
-     *
-     * @Assert\Type(type="string")
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true
+     * )
      */
     protected $email;
 
